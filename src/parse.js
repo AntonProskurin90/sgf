@@ -1,4 +1,4 @@
-const fs = require('fs')
+// const fs = require('fs')
 
 const Peekable = require('./peekable')
 const {tokenizeIter, tokenizeBufferIter} = require('./tokenize')
@@ -129,7 +129,8 @@ exports.parse = function(contents, options = {}) {
 exports.parseBuffer = function(buffer, options = {}) {
     return exports.parseTokens(tokenizeBufferIter(buffer, {encoding: options.encoding}), options)
 }
-
+/*
 exports.parseFile = function(filename, options = {}) {
     return exports.parseBuffer(fs.readFileSync(filename), options)
 }
+*/

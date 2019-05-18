@@ -1,4 +1,4 @@
-module.exports = (() => {
+/*module.exports = (() => {
     try {
         let m = require('iconv-lite')
         if (m == null) throw new Error()
@@ -10,4 +10,11 @@ module.exports = (() => {
             decode: buffer => buffer.toString()
         }
     }
+})()*/
+
+module.exports = (() => {
+    return {
+        encodingExists: () => true,
+        decode: buffer => buffer.toString()
+    }    
 })()
